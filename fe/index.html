@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talk</title>
+</head>
+
+<body class="dark flex flex-col w-screen h-screen">
+  <div id="connection" class="flex flex-col">
+    <div class="flex gap-2 m-2 p-2 border-2 border-cyan-400 rounded-md">
+      <label for="username">username:</label>
+      <input type="text" name="username" id="username" class="w-full">
+    </div>
+    <div class="flex gap-2 p-2">
+      <button id="talk"
+        class="p-2 border-2 border-cyan-400 rounded-md w-full text-white font-bold text-lg">submit</button>
+    </div>
+  </div>
+
+
+
+
+  <div id="talkia" class="hidden flex-col overflow-hidden h-full">
+    <div id="talkbox" class="flex-col overflow-auto h-full flex"></div>
+
+    <div class="flex gap-2 p-2">
+      <div class="flex border-2 p-2 border-cyan-400 rounded-md">
+        <input type="text" placeholder="dst" name="dst" id="dst" class="w-full">
+      </div>
+      <div class="flex border-2 p-2 border-cyan-400 rounded-md w-full">
+        <input type="text" placeholder="message.." name="message" id="message" class="w-full">
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <template id="talk-message">
+      <div class="message flex-col p-2 m-2 border-2 border-cyan-400 rounded-md">
+        <div class="font-bold text-gray-500">
+          <span slot="src">My default src</span>:
+        </div>
+        <div slot="value">My default value</div>
+      </div>
+    </template>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* simple dark mode */
+body.dark {
+    --bg: #1a202c;
+    --text: #e2e8f0;
+    --primary: #4299e1;
+    --secondary: #38b2ac;
+    --accent: #f56565;
+    --border: #4a5568;
+    --shadow: #2d3748;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--bg);
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
+
+button:active {
+    background-color: var(--accent);
+}
+
+button:focus {
+    box-shadow: 0 0 0 3px var(--border);
+}
+
+input {
+    background-color: var(--bg);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+input:focus {
+    box-shadow: 0 0 0 3px var(--border);
+}
+
+textarea {
+    background-color: var(--bg);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+textarea:focus {
+    box-shadow: 0 0 0 3px var(--border);
+}
+
+/* dark mode */
+body.dark {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+body.dark a {
+    color: #4299e1;
+}
+
+body.dark a:hover {
+    color: #38b2ac;
+}
+
+body.dark button {
+    background-color: #4299e1;
+    color: #e2e8f0;
+}
+
+body.dark button:hover {
+    background-color: #38b2ac;
+}
+
+body.dark button:active {
+    background-color: #f56565;
+}
+
+body.dark button:focus {
+    box-shadow: 0 0 0 3px #4a5568;
+}
+
+body.dark input {
+    background-color: #1a202c;
+    color: #e2e8f0;
+    border-color: #4a5568;
+}
+
+body.dark input:focus {
+    box-shadow: 0 0 0 3px #4a5568;
+}
+
+body.dark textarea {
+    background-color: #1a202c;
+    color: #e2e8f0;
+    border-color: #4a5568;
+}
+
+body.dark textarea:focus {
+    box-shadow: 0 0 0 3px #4a5568;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.secondary {
+    color: var(--secondary);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.border {
+    border-color: var(--border);
+}
+
+.shadow {
+    box-shadow: var(--shadow);
+}
